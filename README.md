@@ -2,6 +2,10 @@ tongpao
 ======
 >   This is a organizational website for tongpao. 
 
+tongpao wiki
+======
+>   <a href='https://github.com/GreatmanBill/tongpao/wiki/tongpao%E4%BB%8B%E7%BB%8D'>tongpao介绍</a>
+
 数据库:
 ======
 >   数据库用mysql， 新建用户名:test， 密码:123456
