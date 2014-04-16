@@ -9,7 +9,6 @@ class News():
         self.config = config.getConfig()
         self.db = db(w_db = self.config.site_db_w) 
     def getNews(self):
-        row = self.db.getBy('entries', {'id':1})
-        content = utils.printRow(row)
+        content = 'hello, world!'
 
         return content 

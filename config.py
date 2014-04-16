@@ -16,7 +16,7 @@ class Config():
     debug = True 
 
     #网站数据库配置,可以配置读写分离
-    site_db_w = {'host_w':'localhost', 'user_w':'test', 'passwd_w':'123456', 'database_w':'blog', 'port_w':3306}
+    site_db_w = {'host_w':'localhost', 'user_w':'test', 'passwd_w':'123456', 'database_w':'tongpao_db', 'port_w':3306}
 
 def getConfig():
     return Config()
