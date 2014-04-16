@@ -157,29 +157,3 @@ class db:
         if condition != '':
             sql = "DELETE FROM %s WHERE %s" % (table, condition)
             self.sql(sql)
-
-if __name__ == '__main__':
-    w_db = {'host_w':'xigua.huafeiduo.com', 'user_w':'men10', 'passwd_w':'shang2050kai', 'database_w':'test'}
-    r_db = {'host_r':'xigua.huafeiduo.com', 'user_r':'men10', 'passwd_r':'shang2050kai', 'database_r':'test'}
-    testdb = db(w_db, r_db)
-    #testdb = db(w_db = w_db)
-    #testdb = db(r_db = r_db)
-    write_sql = """insert into tst(name) values('test')"""
-    testdb.sql(write_sql)
-    write_sql = """update tst set name='test_for_update' where id=1"""
-    testdb.sql(write_sql).fetchone()
-    read_sql = """select * from tst"""
-    print testdb.sql(read_sql).fetchall()
-    testdb.truncate('tst')
-    data = {'name':'42424'}
-    print testdb.create('tst', data)
-    print testdb.create('tst', data)
-    print testdb.sql(read_sql).fetchall()
-    print testdb.getBy('tst', {'id':1})
-    testdb.updateBy('tst', {'id':1}, {'name':'tttuut'})
-    print testdb.sql(read_sql).fetchall()
-    print testdb.getList('tst')
-    print testdb.getCount('tst', {})
-    testdb.sqlExe(write_sql)
-    print testdb.getList('tst')
-
