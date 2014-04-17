@@ -12,9 +12,6 @@ import web
 from web import form
 #from utils import utils
 
-
-session = web.session.Session(sher, web.session.DiskStore('sessions'))
-
 """
 用户登录类
 """
@@ -58,38 +55,6 @@ class Login():
         #判断用户输入是否存在并正确
         if validate_dict in users:
 
-            session.logged_in = True
             raise web.seeother('/', False)
 
         return sher.main_render.login(self.login_form)
-
-
-class Logout:
-    def GET(self):
-        session.logged_in = False
-        raise web.seeother('/')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
