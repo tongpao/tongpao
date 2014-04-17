@@ -1,0 +1,6 @@
+$def with (form)
+
+<form name="login" method="post"> 
+    $if not form.valid: <p class="error">Try again, something is error.</p>
+    $:form.render()
+</form>
