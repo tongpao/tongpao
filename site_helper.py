@@ -16,6 +16,8 @@ web.config.debug = config.getConfig().debug
 urls = (
     '/?', 'controllers.main.index.Index',    #controllers/main/index.py 
     '/register', 'controllers.main.register.Register',    #controllers/main/register.py 
+    '/message', 'controllers.main.message.Message',     #controllers/main/message.py
+    '/about_us', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
 )
 
 #加载render, globals可以放置对象,方法可以在base模板，子模板中用
