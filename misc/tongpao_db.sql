@@ -3,6 +3,7 @@
 --create db: create database tongpao_db default charset=utf8;
 --import sql: mysql -hhostname -uuseranme -p tongpao_db < tongpao_db.sql
 **************************************************************************/
+drop table if exists b_user;
 create table b_user(
     u_id int unsigned primary key auto_increment,
     username char(64),
@@ -17,6 +18,7 @@ create table b_user(
     key username(username)
 )engine = innodb default charset=utf8;
 
+drop table if exists b_perm_level;
 create table b_perm_level(
     id int unsigned primary key auto_increment,
     level tinyint unsigned comment '权限级别',
@@ -25,6 +27,7 @@ create table b_perm_level(
     updated int unsigned not null default 0
 )engine = innodb default charset=utf8;
 
+drop table if exists b_permissons;
 create table b_permissons(
     id int unsigned primary key auto_increment,
     level_id tinyint unsigned comment '权限级别',
@@ -34,6 +37,7 @@ create table b_permissons(
     key u_id_level_id (u_id, level_id)
 )engine = innodb default charset=utf8;
 
+drop table if exists b_team_works;
 create table b_team_works(
     id int unsigned primary key auto_increment,
     work_name varchar(100) comment '作品名',
@@ -50,6 +54,7 @@ create table b_team_works(
     key work_name(work_name)
 )engine = innodb default charset=utf8;
 
+drop table if exists b_news;
 create table b_news(
     id int unsigned primary key auto_increment,
     user_id int unsigned not null default 0,
@@ -63,15 +68,16 @@ create table b_news(
     key title(title)
 )engine = innodb default charset=utf8;
 
+drop table if exists b_message;
 create table b_message(
     id int unsigned primary key auto_increment,
-    pid int unsigned not null default 0 comment '父话题id',
     email char(64),
     content text,
     created int unsigned not null default 0,
     updated int unsigned not null default 0
 )engine = innodb default charset=utf8;
 
+drop table if exists b_pictures;
 create table b_pictures(
     id int unsigned primary key auto_increment,
     pic_show_name char(40) unique key comment '图片显示名字,用sha1算法计算原图片名字',
