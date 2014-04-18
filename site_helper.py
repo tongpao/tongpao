@@ -14,9 +14,11 @@ web.config.debug = config.getConfig().debug
 #a.b.c.d.E  E是文件中的类，则:
 #类似 from a.b.c.d import E
 urls = (
+    '/login', 'controllers.main.login.Login',
     '/?', 'controllers.main.index.Index',    #controllers/main/index.py
     '/register', 'controllers.main.register.Register',    #controllers/main/register.py
-    '/login', 'controllers.main.login.Login',
+    '/message', 'controllers.main.message.Message',     #controllers/main/message.py
+    '/about_us', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
 )
 
 #加载render, globals可以放置对象,方法可以在base模板，子模板中用
