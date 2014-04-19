@@ -14,13 +14,15 @@ web.config.debug = config.getConfig().debug
 #a.b.c.d.E  E是文件中的类，则:
 #类似 from a.b.c.d import E
 urls = (
-    '/?', 'controllers.main.index.Index',    #controllers/main/index.py
-    '/register', 'controllers.main.register.Register',    #controllers/main/register.py
-    '/login', 'controllers.main.login.Login',           #controllers/main/login.py
-    '/logout', 'controllers.main.login.Logout',         #controllers/main/login.py
-    '/message', 'controllers.main.message.Message',     #controllers/main/message.py
-    '/about_us', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
-    '/news/list','controllers.main.news_list.NewsList',#controllers/main/news_list.py
+    '/?(?:index(?:\.html)?)?', 'controllers.main.index.Index',    #controllers/main/index.py
+    '/register(?:\.html)?', 'controllers.main.register.Register',    #controllers/main/register.py
+    '/login(?:\.html)?', 'controllers.main.login.Login',           #controllers/main/login.py
+    '/logout(?:\.html)?', 'controllers.main.login.Logout',         #controllers/main/login.py
+    '/message(?:\.html)?', 'controllers.main.message.Message',     #controllers/main/message.py
+    '/about_us(?:\.html)?', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
+    '/contact_us(?:\.html)?', 'controllers.main.contact_us.ContactUs', #controllers/main/contact_us.py
+    '/show_works(?:\.html)?', 'controllers.main.show_works.ShowWorks', #controllers/main/show_works.py
+    '/news/list(?:\.html)?','controllers.main.news_list.NewsList',#controllers/main/news_list.py
     '/news/view/(\d+)','controllers.main.news_view.NewsView',#controllers/main/news_view.py
 )
 
