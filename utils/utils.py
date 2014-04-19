@@ -26,5 +26,18 @@ def judgeIsNone(data, key_list):
             return {'status':False, 'msg':'key: %s is None' % key} 
     return {'status':True, 'msg':'ok'} 
 
+def convTsp2Date(tsp):
+    """转换时间戳为日期格式"""
+    import time
+    timeArray = time.localtime(tsp)
+    return time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+
+def convDate2Tsp(date):
+    import time
+    timeArray = time.strptime(date, "%Y-%m-%d %H:%M:%S")
+    return int(time.mktime(timeArray))
+
+
+    
 if __name__ == '__main__':
     pass

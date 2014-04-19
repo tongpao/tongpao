@@ -19,6 +19,8 @@ urls = (
     '/register', 'controllers.main.register.Register',    #controllers/main/register.py
     '/message', 'controllers.main.message.Message',     #controllers/main/message.py
     '/about_us', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
+    '/news/list','controllers.main.news_list.NewsList',#controllers/main/news_list.py
+    '/news/view/(\d+)','controllers.main.news_view.NewsView',#controllers/main/news_view.py
 )
 
 #加载render, globals可以放置对象,方法可以在base模板，子模板中用
