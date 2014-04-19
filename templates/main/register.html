@@ -1,7 +1,81 @@
-<form action='/register' method='post'>
-    <p><label for = 'username'>用户名</label><input type = 'text' name = 'username' id = 'username'/></p>
-    <p><label for = 'passwd'>密码</label><input type = 'password' name = 'passwd' id = 'passwd'/></p>
-    <p><label for = 'repasswd'>确认密码</label><input type = 'password' name = 'repasswd' id = 'repasswd'/></p>
-    <p><label for = 'email'>邮箱</label><input type = 'text' name = 'email' id = 'email'/></p>
-    <p><input type = 'submit' name = 'sub' value='注册''/></p>
-</form>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>同袍工作室</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/templatemo_style_fix_menu.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+  <style>
+  		.form-group{ text-align:center;}
+  </style>
+</head>
+
+<body>
+ <header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#" target="_parent">同袍工作室</a>
+          <nav class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="active"><a href="index.html">首页</a></li>
+              <li><a href="about.html">关于</a></li>
+              <li><a href="showworks.html">作品展示</a></li>          
+              <li><a href="contact.html">联系我们</a></li>
+			  <li><a href="login.html">登陆</a></li>
+			  <li><a href="register.html">注册</a></li>
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">呵呵<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"  target="_blank">呵呵</a></li>
+                  <li><a href="#" target="_blank">呵呵</a></li>
+                  <li><a href="#" target="_blank">呵呵</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="container">
+	<h2 align="center";>用户注册</h2>
+    <form class="form-horizontal" role="form" style=" border:1px #CCCCCC solid; box-shadow:5px 5px #CCCCCC; width:500px; margin:0 auto; padding:10px 10px;">
+      <div class="form-group">
+        <label for="inputUsername3" class="col-sm-2 control-label">用户名：</label>
+        <div class="col-dm-6">
+          <input type="text" name="username" class="form-control" id="inputUsername3" placeholder="用户名">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">密码：</label>
+        <div class="col-dm-6">
+          <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="密码">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="reinputPassword3" class="col-sm-2 control-label">再次输入密码：</label>
+        <div class="col-dm-6">
+          <input type="password" name="repassword" class="form-control" id="reinputPassword3" placeholder="再次输入密码">
+        </div>
+      </div>
+     	<div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
+        <div class="col-dm-6">
+          <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="邮箱">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" name="submit" class="btn btn-default">注册</button>
+        </div>
+      </div>
+    </form>
+</div>
+
+<script src="js/jQuery.1.7.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>	
+</body>
+</html>
