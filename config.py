@@ -13,10 +13,12 @@ class Config():
     version = 0.1
 
     #是否开启debug模式
-    debug = True 
+    debug = True
 
     #网站数据库配置,可以配置读写分离
     site_db_w = {'host_w':'localhost', 'user_w':'test', 'passwd_w':'123456', 'database_w':'tongpao_db', 'port_w':3306}
 
+    #设置session的过期时间
+    session_timeout = 15 #60s
 def getConfig():
     return Config()
