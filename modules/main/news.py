@@ -21,3 +21,15 @@ class News():
         rows = self.db.getList('b_news',condition, orderBy, start, limit, fields)
 
         return rows
+    
+    def delete_news(self,condition):
+        self.db.daleteBy('b_news',condition)
+
+    def update_news(self,condition):
+        self.db.updateBy('b_news',condition,data)
+
+    def create_news(self,data):
+        insert_id=self.db.create('b_news',data)
+
+        return insert_id
+
