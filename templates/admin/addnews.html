@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>增加 文章 | Django 站点管理员</title>
+
+<script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class="news-news change-form">
+
+
+    
+
+› 增加 文章
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>增加 文章</h1>
+        <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" action="" method="post" id="news_form"><input name="csrfmiddlewaretoken" value="mR8orAHwPSDPHOoTabgggwwWgSwTBslh" type="hidden">
+<div>
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-title">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_title">标题:</label>
+                        
+                            <input class="vTextField" id="id_title" maxlength="200" name="title" type="text">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-author">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_author">作者:</label>
+                        
+                            <input class="vTextField" id="id_author" maxlength="100" name="author" value="monster" type="text">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-img">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_img">Img:</label>
+                        
+                            <input id="id_img" name="img" type="file">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-content">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_content">内容:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_content" name="content" rows="10"></textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-filedown">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_filedown">上传附件:</label>
+                        
+                            <input id="id_filedown" name="filedown" type="file">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input value="保存" class="default" name="_save" type="submit">
+
+
+<input value="保存并增加另一个" name="_addanother" type="submit">
+<input value="保存并继续编辑" name="_continue" type="submit">
+</div>
+
+
+
+   <script type="text/javascript">document.getElementById("id_title").focus();</script>
+
+
+
+
+<script type="text/javascript">
+(function($) {
+    var field;
+
+
+})(django.jQuery);
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+
+</body></html>
