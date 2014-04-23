@@ -10,6 +10,7 @@ import site_helper as sher
 from modules.main.user import User 
 import web
 from utils import utils
+import time
 class Register():
     def GET(self):
         error={'status':'init', 'msg':''}
@@ -31,6 +32,8 @@ class Register():
             error={'status':'failure', 'msg':'user name existed'}
             return sher.main_render.register(error)
 
+        createdata=int(time.time())#加入时间
+        request_data['created']=createdata
         del request_data['rpasswd']#如果不存在当前用户，直接存储到数据库，回到login页面
         user.create_user(request_data)
         raise web.seeother('login',False)
