@@ -25,8 +25,15 @@ class User():
 
         return row
 
-    def getUsers(self, condition, fields = '*'):
-        rows = self.db.getList('b_user', condition, fields = fields)
+    def getCount(self, condition):
+        return self.db.getCount('b_user', condition)
+
+    def getUsers(self, condition, orderBy = None, start = None, limit = None, fields = '*'):
+        sql = """select %s from b_user as a inner join b_permissons as b using(u_id) inner join b_perm_level as c \
+                 on b.level_id = c.id where is_active = %d order by %s limit %d, %d\
+              """ % (fields, condition['is_active'], orderBy, start, limit) 
+        print 'sql:', sql
+        rows = self.db.sql(sql).fetchall()
 
         return rows
 
