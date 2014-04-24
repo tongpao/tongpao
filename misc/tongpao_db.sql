@@ -54,6 +54,19 @@ create table b_team_works(
     key work_name(work_name)
 )engine = innodb default charset=utf8;
 
+drop table if exists b_members;
+create table b_members(
+    id int unsigned primary key auto_increment,
+    mem_name char(32) comment '成员姓名',
+    mem_email char(64) comment '成员email',
+    pic_id int unsigned not null default 0 comment '成员头像图片id',
+    blog_addr varchar(254) comment '博客地址',
+    github_url varchar(254) comment 'github地址',
+    join_time int unsigned not null default 0 comment '加入工作室时间',
+    created int unsigned not null default 0,
+    updated int unsigned not null default 0
+)engine = innodb default charset=utf8;
+
 drop table if exists b_news;
 create table b_news(
     id int unsigned primary key auto_increment,
