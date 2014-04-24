@@ -23,7 +23,7 @@ class M_News():
         return rows
     
     def delete_news(self,condition):
-        self.db.daleteBy('b_news',condition)
+        self.db.deleteBy('b_news',condition)
 
     def update_news(self,condition):
         self.db.updateBy('b_news',condition,data)

@@ -47,12 +47,19 @@ class delNews():
     def GET(self):
         news=M_News()
         newslist=news.getNews(condition={},fields="*")
-        print newslist
         return sher.admin_render.delnews(newslist)
     
     
     def POST(self):
-        pass
+        request_data=web.input()
+        print request_data
+        news=M_News()
+        delnews=news.delete_news(request_data)
+        raise web.seeother('delnews',False)
+class searchNews():
+    pass
+
+
 
 
 

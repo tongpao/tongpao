@@ -26,11 +26,15 @@ $def with(newslist)
 <script type="text/javascript" src="delnews_files/actions.js"></script>
 
 <meta name="robots" content="NONE,NOARCHIVE">
+
+
 </head>
-
 <body>
-<li>
-
-</li>
+<form action="" method="POST">
+$for row in newslist:
+    <li> <input type="checkbox" name="id" value="$row['id']">$row['title']</li>
+    $row['content']
+<button type="submit">删除新闻</button>
+</form>
 
 </body></html>
