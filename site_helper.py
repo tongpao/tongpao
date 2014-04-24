@@ -18,9 +18,12 @@ urls = (
     '/register(?:\.html)?', 'controllers.main.register.Register',    #controllers/main/register.py
     '/login(?:\.html)?', 'controllers.main.login.Login',           #controllers/main/login.py
     '/logout(?:\.html)?', 'controllers.main.login.Logout',         #controllers/main/login.py
-    '/message(?:\.html)?', 'controllers.main.message.Message',     #controllers/main/message.py
     '/about_us(?:\.html)?', 'controllers.main.aboutus.Aboutus',#controllers/main/aboutus.py
     '/contact_us(?:\.html)?', 'controllers.main.contact_us.ContactUs', #controllers/main/contact_us.py
+    '/message(?:\.html)?', 'controllers.main.message.Message', #controllers/main/message.py
+    '/message/list(?:\.html)?', 'controllers.main.message_list.MsgList', #controllers/main/message_list.py
+    '/message/view/(\d+)', 'controllers.main.message_view.MsgView', #controllers/main/message_view.py
+    '/contact_list(?:\.html)?', 'controllers.main.contact_us.ContactList',#controllers/main/contact_list.py
     '/show_works(?:\.html)?', 'controllers.main.show_works.ShowWorks', #controllers/main/show_works.py
     '/news/list(?:\.html)?','controllers.main.news_list.NewsList',#controllers/main/news_list.py
     '/news/view/(\d+)','controllers.main.news_view.NewsView',#controllers/main/news_view.py

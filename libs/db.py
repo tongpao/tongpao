@@ -34,13 +34,13 @@ class db:
     def sql(self,sql):
         #判断是查询语句，并且读服务器连接上,优先用读服务器
         if self.readable and sql.lstrip()[0:7].lower().startswith('select'):
-            #print 'read1:, sql:',sql
+            print 'read1:, sql:',sql
             self.dbCursor_r.execute(sql)
             self.dbConn_r.commit()
             return self.dbCursor_r
 
         elif self.writeable:
-            #print 'write:, sql:',sql
+            print 'write:, sql:',sql
             self.dbCursor_w.execute(sql)
             if sql.lstrip()[0:7].lower().startswith('insert'):
                 insert_id = self.dbConn_w.insert_id()
@@ -119,7 +119,11 @@ class db:
                         value = MySQLdb.escape_string(value.encode('utf-8'))
                     conditionList.append("%s='%s'" % (key, value))
                 condition = " and ".join(conditionList)
+        if not condition:
+            sql = "%s WHERE %s" % (sql, str(1))
+        else:
             sql = "%s WHERE %s" % (sql, condition)
+
         if orderBy is not None:
             sql = "%s ORDER BY %s" % (sql, orderBy)
         if start is not None and limit is not None:
