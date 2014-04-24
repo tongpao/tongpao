@@ -1,0 +1,29 @@
+$def with (data)
+<h1> message list</h1>
+<hr>
+<ul>
+    $for row in data['rows']:
+        $ date = data['functions']['tsp2date'](row['created'])
+        <h2>留言者邮箱:$row['email']<h2><hr>
+                <h5>时间：<span>$date</span></h5>
+        <h3>内容:$row['content']<h3><hr>
+</ul>
+<hr />
+<div class="pager_center">
+    <ul class="pagination">
+        <li class="disabled"><a href="/message/list?page=1" class="number">首页</a></li> 
+        <li class="disabled"><a href="/message/list?page=$data['last_page']">上一页</a></li> 
+        $for page in range(data['start_page'],data['end_page'] + 1):
+            <li><a href="/message/list?page=$page" class="number">$page</a></li> 
+        <li><a href="/message/list?page=$data['next_page']">下一页</a></li> 
+        <li><a href="/message/list?page=$data['page_count']">尾页</a></li> 
+    </ul>
+</div>
+<style>
+    .pager_center li{
+        float:left;
+        border:1px solid black;
+        margin-left:5px
+    }
+</style>
+
