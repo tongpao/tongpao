@@ -27,6 +27,9 @@ urls = (
     '/news/list(?:\.html)?','controllers.main.news_list.NewsList',#controllers/main/news_list.py
     '/news/view/(\d+)','controllers.main.news_view.NewsView',#controllers/main/news_view.py
     '/admin/users(?:\.html)?', 'controllers.admin.admin_user.AdminUser', #controllers/admin/admin_user.py
+    '/admin/news(?:\.html)?','controllers.admin.admin_news.News',#controllers/admin/admin_news.py
+    '/admin/addnews(?:\.html)?','controllers.admin.admin_news.addNews',#controllers/admin/addnews.py
+    '/admin/delnews(?:\.html)?','controllers.admin.admin_news.delNews',#controllers/admin/delnews.py
 )
 
 app = web.application(urls, globals())

@@ -2,18 +2,13 @@
 <html lang="zh-CN"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>增加 文章 | Django 站点管理员</title>
-
 <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
-
 <meta name="robots" content="NONE,NOARCHIVE">
 </head>
-
-
 <body class="news-news change-form">
 
 
     
-
 › 增加 文章
 </div>
 
@@ -31,12 +26,7 @@
 
 
 
-<form enctype="multipart/form-data" action="" method="post" id="news_form"><input name="csrfmiddlewaretoken" value="mR8orAHwPSDPHOoTabgggwwWgSwTBslh" type="hidden">
-<div>
-
-
-
-
+<form enctype="multipart/form-data" action="" method="post" id="news_form">
 
 
   <fieldset class="module aligned ">
@@ -61,7 +51,7 @@
     
         <div class="form-row field-author">
             
-            
+<!--            
                 <div>
                     
                     
@@ -72,25 +62,10 @@
                     
                     
                 </div>
-            
+-->            
         </div>
     
-        <div class="form-row field-img">
-            
-            
-                <div>
-                    
-                    
-                        <label class="required" for="id_img">Img:</label>
-                        
-                            <input id="id_img" name="img" type="file">
-                        
-                    
-                    
-                </div>
-            
-        </div>
-    
+   
         <div class="form-row field-content">
             
             
@@ -138,11 +113,8 @@
 
 
 <div class="submit-row">
-<input value="保存" class="default" name="_save" type="submit">
+<input value="保存" class="default"  type="submit">
 
-
-<input value="保存并增加另一个" name="_addanother" type="submit">
-<input value="保存并继续编辑" name="_continue" type="submit">
 </div>
 
 
@@ -151,14 +123,6 @@
 
 
 
-
-<script type="text/javascript">
-(function($) {
-    var field;
-
-
-})(django.jQuery);
-</script>
 
 
 </div>
