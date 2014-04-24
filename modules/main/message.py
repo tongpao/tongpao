@@ -4,7 +4,7 @@
 
 import config
 from libs.db import db
-class Message():
+class M_Message():
     def __init__(self):
         self.config = config.getConfig()
         self.db = db(w_db = self.config.site_db_w) 
@@ -25,9 +25,22 @@ class Message():
 
         return row
 
-    def getMsgs(self, condition, fields = '*'):
-        rows = self.db.getList('b_message', condition, fields = fields)
+#    def getMsgs(self, condition, fields = '*'):
+#        rows = self.db.getList('b_message', condition, fields = fields)
+
+#        return rows
+
+
+    def getCount(self, condition = {}):
+        return self.db.getCount('b_message', condition)
+
+    def getMsgsById(self, condition, fields = '*'):
+        row = self.db.getBy('b_message', condition, fields)
+
+        return row 
+
+    def getMsgs(self, condition, orderBy = None, start = None, limit = None, fields = '*'):
+        rows = self.db.getList('b_message',condition, orderBy, start, limit, fields)
 
         return rows
-
-
+    
