@@ -22,7 +22,6 @@ urls = (
     '/contact_us(?:\.html)?', 'controllers.main.contact_us.ContactUs', #controllers/main/contact_us.py
     '/message(?:\.html)?', 'controllers.main.message.Message', #controllers/main/message.py
     '/message/list(?:\.html)?', 'controllers.main.message_list.MsgList', #controllers/main/message_list.py
-    '/message/view/(\d+)', 'controllers.main.message_view.MsgView', #controllers/main/message_view.py
     '/contact_list(?:\.html)?', 'controllers.main.contact_us.ContactList',#controllers/main/contact_list.py
     '/show_works(?:\.html)?', 'controllers.main.show_works.ShowWorks', #controllers/main/show_works.py
     '/news/list(?:\.html)?','controllers.main.news_list.NewsList',#controllers/main/news_list.py
