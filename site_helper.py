@@ -24,6 +24,8 @@ urls = (
     '/message/list(?:\.html)?', 'controllers.main.message_list.MsgList', #controllers/main/message_list.py
     '/contact_list(?:\.html)?', 'controllers.main.contact_us.ContactList',#controllers/main/contact_list.py
     '/show_works(?:\.html)?', 'controllers.main.show_works.ShowWorks', #controllers/main/show_works.py
+    '/admin/addteamwork(?:\.html)?', 'controllers.admin.addteamwork.AddTeamWork', #controllers/admin/addteamwork.py
+    '/admin/teamworklist(?:\.html)?', 'controllers.admin.teamworklist.TeamWorkList',#controllers/admin/teamworklist.py
     '/news/list(?:\.html)?','controllers.main.news_list.NewsList',#controllers/main/news_list.py
     '/news/view/(\d+)','controllers.main.news_view.NewsView',#controllers/main/news_view.py
     '/admin/users(?:\.html)?', 'controllers.admin.admin_user.AdminUser', #controllers/admin/admin_user.py
