@@ -51,7 +51,6 @@ create table b_team_works(
     relate_links text comment '相关连接,没条以"标题:链接","标题:连接"格式',
     is_display enum('hidden','show') not null default 'hidden',
     created int unsigned not null default 0,
-    created int unsigned not null default 0,
     updated int unsigned not null default 0,
     key work_name(work_name)
 )engine = innodb default charset=utf8;
