@@ -49,6 +49,8 @@ create table b_team_works(
     honor text comment '获得荣誉',
     pic_ids varchar(254) comment '图片id, 逗号分开',
     relate_links text comment '相关连接,没条以"标题:链接","标题:连接"格式',
+    is_display enum('hidden','show') not null default 'hidden',
+    created int unsigned not null default 0,
     created int unsigned not null default 0,
     updated int unsigned not null default 0,
     key work_name(work_name)
@@ -86,6 +88,7 @@ create table b_message(
     id int unsigned primary key auto_increment,
     email char(64),
     content text,
+    is_display enum('hidden','show') not null default 'hidden',
     created int unsigned not null default 0,
     updated int unsigned not null default 0
 )engine = innodb default charset=utf8;
