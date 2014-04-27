@@ -1,0 +1,86 @@
+$def with(search)
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>search</title>
+<script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+<body class="news-news change-form">
+
+
+    
+› 搜索
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>搜索新闻</h1>
+        <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" action="" method="post" id="news_form">
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-title">
+            
+            
+                <div>
+                    
+                    
+                    <label class="required" for="id_title">search</label>
+                        
+                            <input class="vTextField" id="id_title"
+                            maxlength="200" name="search" type="text">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+
+<div class="submit-row">
+<input value="search" class="default"  type="submit">
+
+</div>
+
+
+
+   <script type="text/javascript">document.getElementById("id_title").focus();</script>
+    $for row in search:
+        <li>$row['id']<li>
+        $row['title']</br>
+        $row['content']</br>
+       
+
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+
+</body></html>
