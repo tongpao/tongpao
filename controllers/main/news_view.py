@@ -7,13 +7,13 @@ sys.setdefaultencoding("utf-8")
 
 import web
 import site_helper as sher
-from modules.main.news import News 
+from modules.main.news import M_News 
 from utils import utils
 from libs.page import page
 
 class NewsView():
     def __init__(self):
-        self.news = News()
+        self.news = M_News()
 
     def GET(self, news_id):
 

@@ -1,146 +1,29 @@
 $def with (data)
-<h1>show team works</h1>
-<ul>
-    $for row in data['rows']:
-        $ date = data['functions']['tsp2date'](row['created'])
-        <li>项目名称:$row['work_name']</li>
-        <li>项目简介:$row['work_intro']</li>
-        <li>组长:$row['team_leader']</li>
-        <li>成员:$row['team_members']</li>
-        <li>开始时间:$row['start_time']</li>
-        <li>结束时间:$row['end_time']</li>
-        <li>获得荣誉:$row['honor']</li><hr>
-    </ul>
-    <br><hr>
-<div class="pager_center">
-    <ul class="pagination">
-        <li class="disabled"><a href="/show_works?page=1" class="number">首页</a></li> 
-        <li class="disabled"><a href="/show_works?page=$data['last_page']">上一页</a></li> 
-        $for page in range(data['start_page'],data['end_page'] + 1):
-            <li><a href="/show_works?page=$page" class="number">$page</a></li> 
-        <li><a href="/show_works?page=$data['next_page']">下一页</a></li> 
-        <li><a href="/show_works?page=$data['page_count']">尾页</a></li> 
-    </ul>
-</div>
-<style>
-    .pager_center li{
-        float:left;
-        border:1px solid black;
-        margin-left:5px
-    }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>同袍工作室</title>
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/templatemo_style_fix_menu.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/templatemo_style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <header>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#" target="_parent">同袍工作室</a>
-          <nav class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li class="active"><a href="index.html">首页</a></li>
-              <li><a href="about.html">关于</a></li>
-              <li><a href="showworks.html">作品展示</a></li>          
-              <li><a href="contact.html">联系我们</a></li>
-			  <li><a href="login.html">登陆</a></li>
-			  <li><a href="register.html">注册</a></li>
-              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">呵呵<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"  target="_blank">呵呵</a></li>
-                  <li><a href="#" target="_blank">呵呵</a></li>
-                  <li><a href="#" target="_blank">呵呵</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <section class="container" id="page_content">
+<section class="container" id="page_content">
     <div class="row">
-      <div class="span12">
-        <h3>我们的作品</h3>
-        <p class="lead muted">撒大大撒大声地</p>
-
-        <ul class="thumbnails">
-          <li class="span4">
-            <a href="#myModal" class="thumbnail" data-toggle="modal">作品1</a>
-          </li>
-          <li class="span4">
-            <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
-          </li>
-          <li class="span4">
-           <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
-         </li>                                    
-
-         <li class="span4">
-          <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
-        </li>
-        <li class="span4">
-          <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
-        </li>
-        <li class="span4">
-         <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
-       </li>               
-     </ul>             
-   </div>
- </div>        
+        <div class="span12">
+            <h3>我们的作品</h3>
+            <p class="lead muted">撒大大撒大声地</p>
+            <ul class="thumbnails">
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品1</a>
+                </li>
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
+                </li>
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
+                </li>                                    
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
+                </li>
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
+                </li>
+                <li class="span4">
+                    <a href="#myModal" class="thumbnail" data-toggle="modal">作品</a>
+                </li>               
+            </ul>             
+        </div>
+    </div>        
 </section>
-
- <footer>
-    
-      <div class="credit">
-        <p id="templatemo_cr_bar">
-          Copyright © 2072 同袍工作室 <a href="#">东北电力大学</a></a>
-        </p>
-      </div>
-    </div>
-  </footer>
-
-
-
-<script src="/static/js/jQuery.1.7.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-</body>
-</html>
--->

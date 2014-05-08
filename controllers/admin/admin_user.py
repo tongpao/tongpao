@@ -19,15 +19,24 @@ class AdminUser():
         request_data = web.input()
         if 'mod' in request_data:
             mod = request_data['mod']  
-            if mod == 'view_users':
-                return self.viewUsers(request_data)
-            elif mod == 'view_user':
+            if mod == 'list':
+                return self.listUser(request_data)
+            elif mod == 'view':
                 return self.viewUser(request_data)
 
         return '404 page'
 
     def POST(self):
-        pass
+        request_data = web.input()
+        if 'mod' in request_data:
+            if mod == 'add':
+                return self.addUser(request_data)
+            elif mod == 'delete':
+                return self.delUser(request_data)
+            elif mod == 'update':
+                return self.updateUser(request_data)
+
+        return '404 page'
 
     def addUser(self):
         pass
@@ -35,7 +44,7 @@ class AdminUser():
     def updateUser(self):
         pass
 
-    def deleteUser(self):
+    def delUser(self):
         """删除用户只是把用户重激活状态变成未激活状态"""
         pass
 
@@ -45,7 +54,7 @@ class AdminUser():
         
         return sher.admin_render.view_user(row)
 
-    def viewUsers(self, request_data):
+    def listUser(self, request_data):
         """分页展示用户"""
         page_size = 2 
         pages = 3 
@@ -62,6 +71,6 @@ class AdminUser():
         functions = {'tsp2date':utils.convTsp2Date,}
         data['functions'] = functions
 
-        return sher.admin_render.view_users(data)
+        return sher.admin_render.list_user(data)
 
 

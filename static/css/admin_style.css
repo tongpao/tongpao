@@ -1,0 +1,52 @@
+*{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+}
+.line10{
+    width:100%;
+    height:10px;
+    clear:both;
+}
+    
+.line20{
+    width:100%;
+    height:20px;
+    clear:both;
+}
+
+.wrap{
+    padding:50px 50px 10px 50px;
+}
+
+/**** list_user  *****/
+.users li{
+    width:80%;
+    height:40px;
+    line-height:40px;
+    margin:0 auto;
+    border-bottom:1px #ccc solid;
+}
+
+.users li span{
+    float:right;
+    margin:0 10px 0 0;
+}
+
+/**** footer *****/
+footer{
+    clear:both;
+    height:30px;
+    width:100%;
+    line-height:30px;
+    text-align:center;
+    color:#ccc;
+    font-size:12px;
+    background:#eee;
+}
+    
+footer a{
+    color:#ccc;
+}

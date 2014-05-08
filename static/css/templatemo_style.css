@@ -8,20 +8,34 @@ footer { color: white; background: #28262A;	margin-top: 20px; }
 footer a { text-decoration: none; color: #ebd08c; }
 footer a:hover { color: #CC6600; }
 
-.container { margin: 0 auto; }
+.container { margin:0 auto; }
 .brand { letter-spacing: 10px; font-weight:700;}
 .float_l { float: left }
 .float_r { float: right }
 .cleaner { clear: both }
 
-.list3_outter{border-radius:125px 125px; width:250px; height:250px; position:relative;}
+.list3_outter{border-radius:50px 50px; width:100px; height:100px; position:relative; margin:0 auto;}
 .list3_news{background:url('../../static/images/news.jpg') center center; background-size:cover;}
 .list3_members{background:url('../../static/images/members.jpg') center center; background-size:cover;}
 .list3_honer{background:url('../../static/images/honer.jpg') center center; background-size:cover;}
-.list3_inner{padding-top:100px; width:250px; text-align:center; font-size:30px; color:#fff; display:none; z-index:10;}
-.list3_cover{border-radius:125px 125px; width:250px; height:250px;font-size:20px; text-align:center;color:#fff;display:block; top:0px; left:0px; position:absolute; background:rgba(0,0,0,.1); z-index:9;}
-.introduction{position:relative; display:none;padding:15px; top:50px; }
-.more{ margin: 10px 70px;}
+.list3_inner{padding-top:10px; width:100px; text-align:center; font-size:30px; color:#fff; display:none; z-index:10;}
+.list3_cover{border-radius:50px 50px; width:100px; height:100px;font-size:20px; text-align:center;color:#fff;display:block; top:0px; left:0px; position:absolute; background:rgba(0,0,0,.1); z-index:9;}
+.introduction{position:relative; display:none;padding:15px; top:15px; }
+.more{ text-align:center; margin:10px auto;}
+.span4{ width:30%;}
+
+.carousel-inner .item img{width:100%; height:420px;}
+
+
+.row .title{ background:#000; color:#FFF; padding:5px;}
+.news_list{ line-height:1.5;}
+.news_list li:hover{ background:#CCC;}
+.pagination{ margin:0 auto; width:600px; }
+.pageindex_start{float:left; width:auto; margin-right:0px;}
+.pageindex_end{ float:left; width:auto; margin-left:0px;}
+.pageindex_outter{ width:300px; float:left; overflow:hidden;}
+.pageindex{ width:1000%; position:relative; left:0px;}
+.pageindex li a{ width:15px; text-align:center; padding:0px;}
 
 .rp_box { clear: both; margin-bottom: 20px; padding-top: 20px; padding-bottom: 20px; border-bottom: 1px dashed gray }
 .rp_box img { float: left; margin-right: 20px }
@@ -96,7 +110,7 @@ footer a:hover { color: #CC6600; }
 
 #comment_form .form_row { width: 100%; margin-bottom: 15px; }
 
-#templatemo_cr_bar { margin: 0 auto; padding: 15px 10px; color: #ddd4c5; text-align: center; }
+#templatemo_cr_bar { margin: 0 auto; padding: 5px 10px; color: #ddd4c5; text-align: center; }
 
 
 .icon-button {
