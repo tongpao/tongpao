@@ -13,6 +13,7 @@ create table b_user(
     pic_id int comment '头像图片id',
     description text comment '简单摘要',
     research_fields varchar(255) comment '研究领域,每条以逗号分割',
+    is_active tinyint unsigned not null default 1 comment '用户是否已激活，1激活，0未激活',
     created int unsigned not null default 0,
     updated int unsigned not null default 0,
     key username(username)
